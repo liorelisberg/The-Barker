@@ -1,0 +1,221 @@
+html{
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-size: 100%;
+  background-position: bottom;
+  background-color: #7a7979;
+  min-height: 100%;
+}
+
+form{
+  padding: 20px;
+  margin-top: 60px;
+}
+
+form button, form h5{
+  margin: 20px 0;
+}
+
+input[type=text]:not(.browser-default):focus:not([readonly]),
+input[type=email]:not(.browser-default):focus:not([readonly]),
+input[type=password]:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]){
+  border-color: #ec407a;
+  box-shadow: none;
+}
+
+input[type=text]:not(.browser-default):focus:not([readonly]) + label,
+textarea.materialize-textarea:focus:not([readonly]) + label,
+input[type=email]:not(.browser-default):focus:not([readonly]) + label,
+input[type=password]:not(.browser-default):focus:not([readonly]) + label{
+  color: #ec407a !important;
+}
+
+.logout-btn{
+  color: inherit;
+  border: none;
+  padding: 0 10px;
+  font: inherit;
+  cursor: pointer;
+  background: inherit;    
+}
+.logout-btn:hover{
+  background: #363636;
+}
+.logout-btn:focus{
+  background: #363636;
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+.create-post {
+  margin: 2rem auto;
+}
+.post-details {
+  position: relative;
+  min-height: 60vh;
+  top: 50px;
+}
+.post-details .card-body {
+  white-space: -moz-pre-wrap; /* Firefox */
+  white-space: -o-pre-wrap; /* Opera */
+  white-space: pre-wrap; /* Chrome */
+  word-wrap: break-word; /* IE */
+}
+
+.create-post .message {
+  padding: 10px 0;
+}
+.social-medias {
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 60px;
+  margin-bottom: 1rem;
+}
+
+footer .page-footer {
+  opacity: 0.8;
+  bottom: 0;
+  position: relative;
+  width: 100%;
+  /* min-width: 60%; */
+  margin: 85px 0 0 0;
+  padding:5px 0;
+} 
+.copyright { 
+  display: inline-block;
+  margin-left: 5rem;
+}
+.signin {
+  padding-bottom: 1rem;
+}
+
+nav .brand-logo {
+  display: block;
+  margin: 0 2em;
+}
+nav .brand-logo:hover,
+.new-post:hover ,
+.logout-btn:hover,
+.sign-in:hover,
+.sign-up:hover{
+  transition: 1s;
+  -moz-transition: 1s;
+  -o-transition: 1s;
+  background-color: #353535;
+}
+nav .icon {
+  display: none;
+}
+form.white {
+  margin: 30px 0;
+}
+
+@media only screen and (max-width: 600px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+ 
+  /*display hamburger icon on mobile*/
+  .navbar .icon{
+    display: flex;
+    padding: 0 1rem;
+  }
+  .navbar .icon i{
+    position: relative;
+    top:1rem;
+  }
+  .navbar .icon:hover{
+    transition: 1s;
+    -moz-transition: 1s;
+    -o-transition: 1s;
+    background: #363636;
+  }
+
+  /*hide origin navbar*/
+  .navbar .nav-menu{
+    text-align: center;
+    width: 100%;
+    display: none;
+  }
+
+  /*show mobile nav*/
+  .navbar.responsive .nav-menu{
+    text-align: center;
+    background-color: #353535;
+    width: 100%;
+    display: none;
+  }  
+
+  .navbar.responsive .nav-menu,
+  .navbar.responsive .nav-menu>* {
+    display: block;
+    margin: 0;
+  }
+
+  /*rotate and transform ham icon on click*/
+  .navbar.responsive .icon i{
+    transform : rotateY(180deg);
+    transition: all 1.5s 0.25s;
+    transform-origin: 50% 50%;
+    }
+
+  /*rotate and re-transform ham icon on click*/
+  .navbar .icon i{
+    transform : rotateY(0deg);
+    transition: all 1.5s 0.25s;
+    transform-origin: 50% 50%;
+  }
+}
+.navbar.responsive .logout-btn:focus,
+.navbar.responsive .logout-btn:hover,
+.signed-in .new-post:focus,
+.signed-in .new-post:hover{
+  background: #212121;
+}
+
+.post-summary .like {
+  display: inline-block;
+  border-radius: 8px;
+  font-size: 10px;
+  padding: 1px 5px 1px 5px;
+  margin: 0 5px;
+}
+.post-summary .comment {
+  display: inline-block;
+  border-radius: 8px;
+  font-size: 10px;
+  padding: 1px 5px 1px 5px;
+  margin: 0 5px;
+}
+.post-summary .report {
+  display: inline-block;
+  border-radius: 5px;
+  font-size: 8px;
+  padding: 1px 3px 1px 3px;
+  margin: 0 3px;
+
+  position: relative;
+  bottom: 22px;
+  right:20px;
+}
+
+.post-summary:hover {
+ background-color: #f5f5f5; 
+}
+.notification-panel .card-content:hover {
+  background-color: #f5f5f5; 
+ }
+
+ .create-post .responsive-img {
+   display: inline;
+ }
+
